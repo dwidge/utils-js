@@ -18,7 +18,8 @@ export const formatDate = (
   if (isNaN(parsedDate.getTime())) return;
 
   // Set the locale based on the country
-  const locale = country?.toUpperCase() === "US" ? "en-US" : "en-GB";
+  const locale =
+    !country || country?.toUpperCase() === "US" ? "en-US" : "en-GB";
 
   // Define the options for date and time formatting
   const options: Intl.DateTimeFormatOptions = {
@@ -39,15 +40,19 @@ export const formatDate = (
   // Modify the formatted date string to match the desired output
   // For US: MM/DD/YYYY - HH:mm a
   // For others: YYYY-MM-DD - HH:mm a
-  const [datePart, timePart] = formattedDate.split(", ");
+  const [datePart, timePart] = formattedDate.split(",");
   assert(datePart);
   let formattedString;
   if (locale === "en-US") {
     const [month, day, year] = datePart.split("/");
-    formattedString = `${month}/${day}/${year} - ${timePart}`;
+    formattedString = `${month}/${day}/${year.trim()} - ${timePart
+      .trim()
+      .toUpperCase()}`;
   } else {
     const [day, month, year] = datePart.split("/");
-    formattedString = `${year}-${month}-${day} - ${timePart}`;
+    formattedString = `${year}-${month}-${day} - ${timePart
+      .trim()
+      .toUpperCase()}`;
   }
 
   return formattedString;

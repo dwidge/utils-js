@@ -1,6 +1,6 @@
 {
   "name": "@dwidge/utils-js",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A utility library for JavaScript.",
   "repository": "github:dwidge/utils-js",
   "main": "./dist/cjs/index.js",
