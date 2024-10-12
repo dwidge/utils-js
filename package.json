@@ -26,6 +26,9 @@
     "prepare": "rimraf dist && ncp assets/ dist/ && tsc -b tsconfig*",
     "test": "node --test --test-name-pattern"
   },
+  "dependencies": {
+    "map-keys-deep": "^0.0.2"
+  },
   "devDependencies": {
     "@types/node": "^22.7.5",
     "expect": "^29.7.0",
