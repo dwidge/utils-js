@@ -2,7 +2,12 @@
   "name": "@dwidge/utils-js",
   "version": "0.0.3",
   "description": "A utility library for JavaScript.",
-  "repository": "github:dwidge/utils-js",
+  "author": "DWJ",
+  "license": "BSL-1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dwidge/utils-js.git"
+  },
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist/types/index.d.ts",
@@ -18,20 +23,20 @@
     "src"
   ],
   "scripts": {
-    "prepare": "rimraf dist && ncp assets/ dist/ && tsc && tsc --project tsconfig.esm.json",
-    "test": "node --test"
+    "prepare": "rimraf dist && ncp assets/ dist/ && tsc -b tsconfig*",
+    "test": "node --test --test-name-pattern"
   },
   "devDependencies": {
-    "@types/node": "^22.5.4",
+    "@types/node": "^22.7.5",
     "expect": "^29.7.0",
     "ncp": "^2.0.0",
-    "rimraf": "^5.0.5",
-    "typescript": "^5.2.2"
+    "rimraf": "^6.0.1",
+    "typescript": "^5.6.3"
   },
   "publishConfig": {
     "access": "public"
   },
-  "packageManager": "pnpm@9.7.1",
+  "packageManager": "pnpm@9.12.1",
   "engines": {
     "node": ">=20"
   }
