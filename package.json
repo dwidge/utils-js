@@ -1,6 +1,6 @@
 {
   "name": "@dwidge/utils-js",
-  "version": "0.0.5",
+  "version": "0.0.11",
   "description": "A utility library for JavaScript.",
   "author": "DWJ",
   "license": "BSL-1.0",
@@ -26,7 +26,7 @@
     "prepare": "rimraf dist && ncp assets/ dist/ && tsc -b tsconfig*",
     "test": "node --test --test-name-pattern"
   },
-  "dependencies": {
+  "peerDependencies": {
     "map-keys-deep": "^0.0.2"
   },
   "devDependencies": {
