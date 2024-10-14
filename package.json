@@ -23,8 +23,8 @@
     "src"
   ],
   "scripts": {
-    "prepare": "rimraf dist && ncp assets/ dist/ && tsc -b tsconfig*",
-    "test": "node --test --test-name-pattern"
+    "prepare": "rimraf dist && ncp assets/ dist/ && tsc -b . tsconfig.cjs.json",
+    "test": "node --enable-source-maps --test --test-name-pattern"
   },
   "peerDependencies": {
     "map-keys-deep": "^0.0.2"
