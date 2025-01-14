@@ -1,4 +1,5 @@
 export * from "./assert.js";
+export * from "./asyncMap.js";
 export * from "./changeCase.js";
 export * from "./dropUndefined.js";
 export * from "./FlagKeysFromRecordKeys.js";
