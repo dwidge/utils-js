@@ -2,6 +2,8 @@ export * from "./assert.js";
 export * from "./asyncMap.js";
 export * from "./changeCase.js";
 export * from "./dropUndefined.js";
+export * from "./findDuplicates.js";
+export * from "./findUnique.js";
 export * from "./FlagKeysFromRecordKeys.js";
 export * from "./formatDate.js";
 export * from "./getLast.js";
