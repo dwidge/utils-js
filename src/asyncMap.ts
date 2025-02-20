@@ -9,7 +9,7 @@
  */
 export const asyncMap = async <T, U>(
   array: T[],
-  asyncFn: (item: T, index: number, array: T[]) => Promise<U>,
+  asyncFn: (item: T, index: number, array: T[]) => U | Promise<U>,
 ): Promise<U[]> => {
   const results: U[] = [];
   for (let i = 0; i < array.length; i++) {
