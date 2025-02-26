@@ -7,6 +7,7 @@ export * from "./findUnique.js";
 export * from "./FlagKeysFromRecordKeys.js";
 export * from "./formatDate.js";
 export * from "./getLast.js";
+export * from "./getTimeDifferenceString.js";
 export * from "./groupBy.js";
 export * from "./mergeObject.js";
 export * from "./notNull.js";
