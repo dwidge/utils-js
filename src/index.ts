@@ -1,5 +1,6 @@
 export * from "./assert.js";
 export * from "./asyncMap.js";
+export * from "./camelcaseKeys.js";
 export * from "./changeCase.js";
 export * from "./dropUndefined.js";
 export * from "./findDuplicates.js";
