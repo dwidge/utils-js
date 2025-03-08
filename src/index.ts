@@ -3,6 +3,7 @@ export * from "./asyncMap.js";
 export * from "./camelcaseKeys.js";
 export * from "./changeCase.js";
 export * from "./dropUndefined.js";
+export * from "./filterDuplicatesBy.js";
 export * from "./findDuplicates.js";
 export * from "./findUnique.js";
 export * from "./FlagKeysFromRecordKeys.js";
