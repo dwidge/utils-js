@@ -5,3 +5,9 @@
 export function assert(v: any, e?: string | Error): asserts v {
   if (!v) throw e instanceof Error ? e : new Error(e);
 }
+
+export const assertNotNull = <T>(value: T | null): T => {
+  if (value === null)
+    throw new Error("assertNotNullE1: Value cannot be null or undefined");
+  return value;
+};
