@@ -11,6 +11,7 @@ export * from "./formatDate.js";
 export * from "./getLast.js";
 export * from "./getTimeDifferenceString.js";
 export * from "./groupBy.js";
+export * from "./makeFileSafeDate.js";
 export * from "./mergeObject.js";
 export * from "./notNull.js";
 export * from "./objCase.js";
