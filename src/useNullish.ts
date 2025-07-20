@@ -21,4 +21,4 @@ export const useNullish =
   <U extends T | null | undefined>(
     v: U,
   ): U extends null ? null : U extends undefined ? undefined : R =>
-    v == null ? v : (f(v as T) as any);
+    (v == null ? v : f(v as T)) as any;
