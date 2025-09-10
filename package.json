@@ -27,7 +27,8 @@
     "test": "node --enable-source-maps --test --test-name-pattern"
   },
   "peerDependencies": {
-    "map-keys-deep": "^0.0.2"
+    "map-keys-deep": "^0.0.2",
+    "p-limit": "^7.1.1"
   },
   "devDependencies": {
     "@types/node": "^22.15.21",
