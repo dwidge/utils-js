@@ -20,6 +20,7 @@ export * from "./prioritySelect.js";
 export * from "./randInt.js";
 export * from "./randItem.js";
 export * from "./sleep.js";
+export * from "./topologicalSortItems.js";
 export * from "./transponseArray.js";
 export * from "./unixSeconds.js";
 export * from "./useNullish.js";
