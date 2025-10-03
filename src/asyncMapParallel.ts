@@ -1,4 +1,4 @@
-import pLimit from "p-limit";
+import { asyncMapLimit } from "./asyncMapLimit.js";
 
 /**
  * Executes an asynchronous function for each element in an array in parallel with a concurrency limit.
@@ -9,15 +9,8 @@ import pLimit from "p-limit";
  * @param {number} concurrency The maximum number of promises to run in parallel.
  * @returns {Promise<U[]>} A promise that resolves to an array of the results of the asynchronous function calls, in the same order as the input array.
  */
-
 export const asyncMapParallel = async <T, U>(
   array: T[],
   asyncFn: (item: T, index: number, array: T[]) => U | Promise<U>,
   concurrency: number,
-): Promise<U[]> => {
-  const limit = pLimit(concurrency);
-  const tasks = array.map((item, index) =>
-    limit(() => asyncFn(item, index, array)),
-  );
-  return Promise.all(tasks);
-};
+): Promise<U[]> => Promise.all(asyncMapLimit(array, asyncFn, concurrency));
